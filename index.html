@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Lesson6</title>
+    <link rel="stylesheet" href="style/style.css">
+    <title>Shop</title>
 </head>
 
 <body>
@@ -17,7 +17,10 @@
                 <nav class="menu_content">
                     <div class="logo">
                         <a href="#"><img class="logo_img" src="img/logo1.svg" alt="logo"></a>
-                        <img class="logo_search" src="img/logo_search.svg" alt="logo_search">
+                        <div class="search">
+                            <img onclick="searchFunction()" class="logo_search" src="img/logo_search.svg" alt="logo_search">
+                            <input id="search" class="search_input" type="search" placeholder="Type for Search">
+                        </div>
                     </div>
                     <div class="buttons">
                         <div class="button_menu">
@@ -51,7 +54,7 @@
                                 </div>
                             </div>
                         </div>
-                        <img class="button_profile" src="img/button_profile.svg" alt="button_profile">
+                        <a href="registration.html"><img class="button_profile" src="img/button_profile.svg" alt="button_profile"></a>
                         <div class="button_cart">
                             <img src="img/button_cart.svg" alt="button_cart">
                             <div class="cart_number">5</div>
@@ -295,25 +298,7 @@
             </div>
         </div>
     </footer>
-    <script>
-        /* Когда пользователь нажимает на кнопку, раскрывается меню */
-        function myFunction() {
-            document.getElementById("myDropdown").classList.toggle("show");
-        }
-        // Закрыть раскрывающийся список, если пользователь щелкнет за его пределами.
-        window.onclick = function (event) {
-            if (!event.target.matches('.dropbtn')) {
-                var dropdowns = document.getElementsByClassName("menu_dropdown");
-                var i;
-                for (i = 0; i < dropdowns.length; i++) {
-                    var openDropdown = dropdowns[i];
-                    if (openDropdown.classList.contains('show')) {
-                        openDropdown.classList.remove('show');
-                    }
-                }
-            }
-        }
-    </script>
+    <script src="script.js"></script>
 </body>
 
 </html>
